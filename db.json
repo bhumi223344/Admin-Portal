@@ -1,0 +1,23 @@
+{
+  "User": [
+    {
+      "username": "bhumi",
+      "password": "bhumi123",
+      "id": "394d"
+    }
+  ],
+  "patients": [
+    {
+      "fullName": "Bhumi Goyal",
+      "age": "22",
+      "email": "bhumi@gmail.com",
+      "dob": "2003-01-29T18:30:00.000Z",
+      "gender": "female",
+      "allergies": "dust",
+      "contactNumber": "1234567890",
+      "emergencyContactName": "hello",
+      "emergencyContactNumber": "1234536789",
+      "id": "37ba"
+    }
+  ]
+}

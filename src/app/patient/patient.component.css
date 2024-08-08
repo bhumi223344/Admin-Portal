@@ -1,0 +1,33 @@
+.main {
+    color: white;
+    background-color: rgb(63, 63, 90);
+    padding-top: 5px;
+  margin: 0 auto;
+  max-width: 5000px;
+  mat-form-field 
+  {
+    width: 100%;
+}
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+    background-color: blue;
+}
+
+.main-body {
+    padding-top: 20px;
+    margin: 0 auto;
+    max-width: 1248px;
+    mat-form-field {
+        width: 105%;
+    }
+}
+.button3 {
+    color: blue;
+
+}
+.button4 {
+    color: red;
+}
+

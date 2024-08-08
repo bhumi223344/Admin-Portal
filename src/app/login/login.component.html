@@ -1,0 +1,19 @@
+<div class="container">
+    <form class="example-form" #loginForm="ngForm">
+      <h2>Admin Login</h2>
+      <label for="username">Username: </label>
+      <input type="text" minlength="5" id="username" name="username" #txtusername>
+      
+      <label for="password">Password: </label>
+      <input type="password" id="password" name="password" #txtpassword> 
+      
+      
+      <button (click)="login(txtusername.value, txtpassword.value)" type="submit" routerLink="/patient">Login</button>
+      
+    </form>
+  
+  <!-- <div *ngIf = "loginFailed">Login Failed.. Please try again!!</div> -->
+  
+ 
+  
+  

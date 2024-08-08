@@ -1,0 +1,68 @@
+<div mat-dialog-title>
+    <h1>Patient Form</h1>
+</div>
+<form [formGroup]="patientForm" (ngSubmit)="onSubmit()"> 
+<div mat-dialog-content class="content">
+    <div class="row">
+    <mat-form-field appearance="outline">
+        <mat-label>Full Name</mat-label>
+        <input matInput type="text" placeholder="Ex. Bhumi" formControlName="fullName">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Age</mat-label>
+        <input matInput type="text" placeholder="Ex. 25" formControlName="age">
+      </mat-form-field>
+    </div>
+    <div class="row mt" >
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Ex. abc@abc.com" formControlName="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Date of Birth</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dob">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+            
+    </div>
+    <div class="row">
+        <mat-radio-group aria-label="Select an option" formControlName="gender" >
+            <mat-label><b>Gender</b></mat-label>
+            <mat-radio-button value="male">Male</mat-radio-button>
+            <mat-radio-button value="female">Female</mat-radio-button>
+            <mat-radio-button value="other">Other</mat-radio-button>
+        </mat-radio-group>
+        
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Allergies</mat-label>
+            <input matInput type="text" placeholder="Ex. dust" formControlName="allergies" >
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Contact Number</mat-label>
+            <input matInput type="text" placeholder="7845689120" formControlName="contactNumber">
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Emergency Contact Name</mat-label>
+            <input matInput type="text" placeholder="Ex. Mr. abc" formControlName="emergencyContactName">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Emergency Contact Number</mat-label>
+            <input matInput type="text" placeholder="Ex. Mrs. abc" formControlName="emergencyContactNumber">
+        </mat-form-field>
+
+    </div>
+  
+
+
+</div>
+<div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" class="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit" class="button1">{{data ? 'Update': 'Save'}}</button>
+</div>
+</form>
